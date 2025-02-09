@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR MACBOOK HAS BEEN COMPRIMSED, IMMEDIATLY SHUT IT DOWN OR A MALICIOUS VIRUS WILL OCCUR!</title>
+    <style>
+        body {
+            font-family: read-write-plaintext-only, sans-serif;
+            text-align: center;
+            padding: 70px;
+            background-color: #FF0000;
+        }
+        .alert-box {
+            background: black;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: darkred;
+        }
+    </style>
+    <script>
+        let messages = [
+            "⚠️DO NOT CLOSE TAB: SUSPICIOUS ACTIVITY DETECTED BY GOOGLE! CLICK OKAY TO SECURE YOUR ACCOUNT.",
+            "⚠️ WARNING: UNKNOWN DEVICE FORCE STOP COMMENCED! DO NOT EXIT THE TAB.",
+            "⚠️ URGENT:EXTREME DANGER LEVELS FROM MACBOOK OVERHEATING.",
+            "⚠️ CRITICAL: YOUR MACBOOK IS BEING CONTROLLED BY A THIRD-PARTY DEVICE, YOU’VE BEEN COMPROMISED!",
+            "⚠️ FINAL WARNING: Your device will be locked if you don't respond now!"
+        ];
+        
+        let index = 0;
+
+        function showWarning() {
+            if (index < messages.length) {
+                alert(messages[index]);
+                index++;
+                showWarning();
+            } else {
+                alert("🛑 SYSTEM IS LOCKED: Please contact Apple Support immediately!");
+            }
+        }
+
+        window.onload = function() {
+            setTimeout(function() {
+                showWarning();
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <div class="alert-box">
+        <h1>YOUR MACBOOK HAS BEEN COMPRIMSED, IMMEDIATLY SHUT IT DOWN OR A MALICIOUS VIRUS WILL OCCUR</h1>
+        <p>Your Apple ID has been accessed from an unknown device. Please verify your identity.</p>
+    </div>
+</body>
+</html>
